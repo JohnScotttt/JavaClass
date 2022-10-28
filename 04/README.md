@@ -39,7 +39,7 @@ stu.load("demo", "demo", "demopw123456", "stu");
 
 3. 正常进入MySQL命令行应该是如下的样子，如果不是就是密码输错了
 
-   ![mysql cmd](https://github.com/JohnScotttt/ImageHosting/blob/main/JavaClass/04/mysql.png)
+   ![mysql cmd](https://github.com/JohnScotttt/ImageHosting/blob/main/JavaClass/04/mysql_cmd.png)
 
 4. 最后在MySQL命令行中输入以下代码即可
 
