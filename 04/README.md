@@ -27,7 +27,7 @@ stu.load("demo", "demo", "demopw123456", "stu");
 
 四个参数分别是数据库名(database)、用户名(user)、用户密码(password)、数据表名(table)，请务必按照自己电脑实际环境和设置更改相应的内容。
 
-设置到这一步，理论上程序已经可以正常运行，如果你是使用**IntelliJ IDEA**或者**Eclipse**，你需要将lib文件夹下的**mysql-connector-j-8.0.31.jar**设为依赖（如图）![IntelliJ IDEA 配置方法](mysql-connector-j-8.0.31.png)
+设置到这一步，理论上程序已经可以正常运行，如果你是使用**IntelliJ IDEA**或者**Eclipse**，你需要将lib文件夹下的**mysql-connector-j-8.0.31.jar**设为依赖（如图）![mysql-connector-j-8.0.31](https://github.com/JohnScotttt/ImageHosting/blob/main/JavaClass/04/mysql-connector-j-8.0.31.png)
 
 ## 0基础MySQL配置
 
@@ -35,11 +35,11 @@ stu.load("demo", "demo", "demopw123456", "stu");
 
 2. 输入安装时设置的root密码
 
-   ![enter password](pw.png)
+   ![enter password](https://github.com/JohnScotttt/ImageHosting/blob/main/JavaClass/04/enter_pw.png)
 
 3. 正常进入MySQL命令行应该是如下的样子，如果不是就是密码输错了
 
-   ![mysql cmd](mysql.png)
+   ![mysql cmd](https://github.com/JohnScotttt/ImageHosting/blob/main/JavaClass/04/mysql.png)
 
 4. 最后在MySQL命令行中输入以下代码即可
 
