@@ -33,9 +33,13 @@ stu.load("demo", "demo", "demopw123456", "stu");
 
 1. 安装完MySQL后，找到MySQL Command Line Client启动
 
-2. 输入安装时设置的root密码![enter password](pw.png)
+2. 输入安装时设置的root密码
 
-3. 正常进入MySQL命令行应该是如下的样子，如果不是就是密码输错了![mysql cmd](mysql.png)
+   ![enter password](pw.png)
+
+3. 正常进入MySQL命令行应该是如下的样子，如果不是就是密码输错了
+
+   ![mysql cmd](mysql.png)
 
 4. 最后在MySQL命令行中输入以下代码即可
 
