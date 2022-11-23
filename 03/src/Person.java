@@ -1,4 +1,4 @@
-package scr;
+package src;
 public abstract class Person {
     protected String name, addr;
     protected char sex;

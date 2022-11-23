@@ -1,4 +1,4 @@
-package scr;
+package src;
 interface Mygroup {
     boolean addStu(Student x);
 

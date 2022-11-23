@@ -1,4 +1,4 @@
-package scr;
+package src;
 public class Student extends Person {
     protected int math, eng;
 
