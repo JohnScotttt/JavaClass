@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 import java.util.HashMap;
 

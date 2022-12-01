@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 import java.awt.Color;//设置棋子颜色和棋子的落子位置
 

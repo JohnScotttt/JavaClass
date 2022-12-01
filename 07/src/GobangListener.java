@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -67,8 +67,10 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
             if (ggg) {
                 if (flag[0]) {
                     if (cco) {
+                        gm.clock.stop();
                         JOptionPane.showMessageDialog(gm, "白棋获胜");
                     } else {
+                        gm.clock.stop();
                         JOptionPane.showMessageDialog(gm, "黑棋获胜");
                     }
                     gm.removeMouseListener(this);
@@ -78,8 +80,10 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
                 if (flag[1]) {
                     if (co[0]) {
                         if (cco) {
+                            gm.clock.stop();
                             JOptionPane.showMessageDialog(gm, "黑棋获胜");
                         } else {
+                            gm.clock.stop();
                             JOptionPane.showMessageDialog(gm, "白棋获胜");
                         }
                         gm.removeMouseListener(this);
@@ -88,8 +92,10 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
                     }
                     if (co[1]) {
                         if (cco) {
+                            gm.clock.stop();
                             JOptionPane.showMessageDialog(gm, "白棋获胜");
                         } else {
+                            gm.clock.stop();
                             JOptionPane.showMessageDialog(gm, "黑棋获胜");
                         }
                         gm.removeMouseListener(this);
@@ -102,11 +108,13 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
         }
         if (e.getActionCommand().equals("暂停")) { // 暂停游戏
             if (stop){
-                gm.tarray[3] = "恢复";
+                // gm.tarray[3] = "恢复";
+                gm.clock.start();
                 gm.addMouseListener(this);
                 stop = !stop;
             } else {
-                gm.tarray[3] = "暂停";
+                // gm.tarray[3] = "暂停";
+                gm.clock.stop();
                 gm.removeMouseListener(this);
                 stop = !stop;
             }
@@ -165,6 +173,7 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
                     for (int i = 0; i < array1.length; i++) {
                         Arrays.fill(array1[i], 0);
                     }
+                    gm.clock.start();
                     gm.addMouseListener(this);
                     array.Reset();
                     gm.repaint();
@@ -175,6 +184,7 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
                         Arrays.fill(array1[i], 0);
                     }
                     // cco=false;
+                    gm.clock.start();
                     gm.addMouseListener(this);
                     array.Reset();
                     gm.repaint();
@@ -196,6 +206,7 @@ public class GobangListener extends MouseAdapter implements ActionListener, Goba
                 cco = true;
                 fff = true;
                 ggg = true;
+                gm.clock.start();
                 gm.addMouseListener(this);
                 array.Reset();
                 gm.repaint();

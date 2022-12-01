@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 public interface Gobang {
     public static final int size = 40;

@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -6,6 +6,8 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
 // import javax.swing.ImageIcon;
@@ -14,30 +16,34 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.Timer;
 
 @SuppressWarnings("serial")
 public class GobangMain extends JPanel implements Gobang {
 
     // 定义数组，存储组件上要显示的文字信息
     String[] tarray = { "开始新游戏", "悔棋", "认输", "暂停", "对战模式：", "人人对战", "人机对战", "选择棋子颜色:" };
-
-    public static void main(String[] args) {
-        GobangMain gm = new GobangMain();
-        gm.initUI();
-    }
+    private JLabel time;// 声明时间lable
+    public Timer clock;// 声明一个计时器
+    private int second = 0;
+    private int minute = 0;
 
     public void initUI() {
         JFrame frame = new JFrame("五子棋");
-        frame.setSize(780, 635);
+        frame.setSize(930, 635);
         frame.setDefaultCloseOperation(3);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setLayout(new BorderLayout());
 
         // 设置棋盘面板的背景颜色
-        this.setBackground(Color.LIGHT_GRAY);
+        this.setBackground(new Color(180, 154, 102));
         // 将棋盘面板添加到窗体的中间部分
         frame.add(this, BorderLayout.CENTER);
+        time = new JLabel("00:00",JLabel.CENTER);// 时间lable
+        time.setPreferredSize(new Dimension(170, 300));
+        frame.add(time, BorderLayout.WEST);
+        time.setFont(new Font("宋体", Font.BOLD, 50));
 
         // 实例化JPanel面板对象，作为东边放置按钮的面板
         JPanel eastPanel = new JPanel();
@@ -50,6 +56,20 @@ public class GobangMain extends JPanel implements Gobang {
         ButtonGroup btg = new ButtonGroup();
         // 实例化事件处理类的对象，然后将棋盘面板作为参数传递到GobangListener类的对象中
         GobangListener gl = new GobangListener(this, array);
+
+        clock = new Timer(1000, null);// 计时器对象
+        clock.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (second == 59) {
+                    second = 0;
+                    minute += 1;
+                } else {
+                    second += 1;
+                }
+                time.setText(String.format("%02d", minute) + ":" + String.format("%02d", second));
+            }
+        });
 
         for (int i = 0; i < tarray.length; i++) {
             if (i < 4) {

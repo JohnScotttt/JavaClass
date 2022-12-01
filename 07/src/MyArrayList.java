@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
  
 public class MyArrayList<E> {
 	public Object[] array;

@@ -1,4 +1,4 @@
-package com.sjsq;
+package src;
 
 public class Judge implements Gobang {
     private int x, y;
