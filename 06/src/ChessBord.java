@@ -3,7 +3,6 @@ package src;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.Base64;
 
 public class ChessBord extends JPanel implements MouseListener {// 继承面板类和鼠标事件接口
     public JLabel side;// 声明落子方lable
@@ -97,7 +96,6 @@ public class ChessBord extends JPanel implements MouseListener {// 继承面板�
 
     @Override
     public void mouseExited(MouseEvent e) {
-        side.setText(new String(Base64.getDecoder().decode("Sm9oblNjb3R0")));
     }
 
     @Override
